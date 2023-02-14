@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NTU Timetable Export</title>
+        
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+        <script src="build/ntu-timetable-to-ics.js"></script>
+        <link rel="icon" type="image/svg" href="https://soptik.tech/favicon.svg">
+		<link rel="stylesheet" href="https://soptik.tech/css/base.css">
+    </head>
+    <body>
+        <h1>NTU Timetable Export</h1>
+        <p>Use this export tool to generate .ics file from your NTU timetable.
+            ICS files may be imported into most calendars, such as google or apple calendar.
+            This way, you can view your timetable in a sane format and from your phone.
+        </p>
+        <br /> <br />
+        <h2>Step 1 - Log into NTU system</h2>
+        <p>Log into <a href="https://wish.wis.ntu.edu.sg/pls/webexe/ldap_login.login?w_url=https://wish.wis.ntu.edu.sg/pls/webexe/aus_stars_planner.main" target="_blank">
+            STARS Planner</a> with your NTU account.</p>
+        <br /> <hr /> <br />
+        <h2>Step 2 - View the timetable</h2>
+        <p>Click on the red <span style="color: white; padding: 10px 10px; text-decoration:none; margin:2px 2px; font:14px Lato,Helvetica,Arial,sans-serif; background-color: #d71440">
+            View in Weekly Calendar format</span> button at the bottom right of the page.</p>
+        <br /> <hr /> <br />
+        <h2>Step 3 - Copy the source code</h2>
+        <p>Right click anywhere on the page and select <span style="color: black; padding: 10px 10px; margin:2px 2px; font:14px; background-color: lightgray;">View page source</span>.</p>
+        <p>Copy all the text shown via Ctrl+A, Ctrl+C.</p>
+        <br /> <hr /> <br />
+        <h2>Step 4 - Generate ICS calendar file</h2>
+        <p>Paste copied source code of the timetable website here.</p>
+        <textarea id="targetdom" editable="true" rows="12" cols="100" resizable="true" style="max-width: 80vw;"></textarea> <br />
+        <button class="generateButton" onclick="importdom();">Generate ICS</button> <br />
+        <br /> <hr /> <br />
+        <h2>Step 5 - Import downloaded ICS file to your calendar</h2>
+        <p>The procedure varies per each application, but pretty much everything should support this file format.</p>
+        <p>For example, 
+            <a href="https://www.howtogeek.com/howto/30834/add-an-ical-or-.ics-calendar-to-google-calendar/" rel="nofollow">
+                here
+            </a>
+            is the procedure for google calendar.
+        </p>
+        <br /> <hr /> <br />
+        Something not working? Found any bugs or have any comments? Contact me at <a href="mailto:ntu@soptik.tech">ntu@soptik.tech</a>.
+    </body>
+</html>
